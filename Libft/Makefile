@@ -6,7 +6,7 @@
 #    By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/17 14:40:28 by larocqueg         #+#    #+#              #
-#    Updated: 2024/10/17 19:46:23 by larocqueg        ###   ########.fr        #
+#    Updated: 2024/10/19 12:30:38 by larocqueg        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS =	$(SRCS_DIR)/ft_isalpha.c \
 		$(SRCS_DIR)/ft_strlen.c \
 		$(SRCS_DIR)/ft_tolower.c \
 		$(SRCS_DIR)/ft_toupper.c \
+		$(SRCS_DIR)/ft_atoi.c \
 
 # Objects files
 OBJS = $(SRCS:.c=.o)
