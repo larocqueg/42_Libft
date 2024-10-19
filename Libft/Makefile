@@ -6,7 +6,7 @@
 #    By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/17 14:40:28 by larocqueg         #+#    #+#              #
-#    Updated: 2024/10/19 12:30:38 by larocqueg        ###   ########.fr        #
+#    Updated: 2024/10/19 12:32:51 by larocqueg        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,10 +20,10 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # Directory paths
-SRCS_DIR = srcs
+SRCS_DIR = .
 
 # Header file
-INCLUDES_DIR = includes
+INCLUDES_DIR = ./libft.h \
 
 # Shoing all *c files path
 SRCS =	$(SRCS_DIR)/ft_isalpha.c \
