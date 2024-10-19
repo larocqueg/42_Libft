@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/17 14:40:28 by larocqueg         #+#    #+#              #
-#    Updated: 2024/10/19 12:32:51 by larocqueg        ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 # The name of the lib
 NAME = libft.a
 
@@ -20,12 +8,11 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # Directory paths
-SRCS_DIR = .
+SRCS_DIR = src
+MAIN_DIR = .
+INCLUDES_DIR = includes
 
-# Header file
-INCLUDES_DIR = ./libft.h \
-
-# Shoing all *c files path
+# Showing all *c files path for src
 SRCS =	$(SRCS_DIR)/ft_isalpha.c \
 		$(SRCS_DIR)/ft_isdigit.c \
 		$(SRCS_DIR)/ft_isalnum.c \
@@ -35,8 +22,13 @@ SRCS =	$(SRCS_DIR)/ft_isalpha.c \
 		$(SRCS_DIR)/ft_tolower.c \
 		$(SRCS_DIR)/ft_toupper.c \
 		$(SRCS_DIR)/ft_atoi.c \
+		$(SRCS_DIR)/ft_memcpy.c
 
-# Objects files
+# Main source file and object file
+MAIN_SRC = $(MAIN_DIR)/main.c
+MAIN_OBJ = $(MAIN_SRC:.c=.o)
+
+# Object files
 OBJS = $(SRCS:.c=.o)
 
 # all rule
@@ -50,13 +42,26 @@ $(NAME) : $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -I $(INCLUDES_DIR) -c $< -o $@
 
+# Main compiling rule (can be moved into 'test' if only for testing)
+main: $(MAIN_OBJ) $(NAME)
+	$(CC) $(CFLAGS) -I $(INCLUDES_DIR) $(MAIN_OBJ) -o main $(NAME)
+
+# Test rule
+test: main
+	./main
+
+# clean rule removes .o from srcs
 clean:
 	rm -rf $(OBJS)
 
-fclean: clean
+# fclean rule runs clean then removes libft.a
+fclean: clean 
 	rm -rf $(NAME)
 
+# re rule runs fclean then runs make again
 re: fclean
 	make
 
+# Avoid name clashes
 .PHONY: all clean fclean re
+
