@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:26:47 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/10/19 15:30:15 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/10/19 16:00:37 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int		ft_toupper(int i);
 int		ft_atoi(const char *str);
 char	*ft_strdup(char *str);
 void	*ft_memcpy(unsigned char *dest, unsigned char *src, size_t n);
+void	*memmove(void *dest, const void *src, size_t n);
 
 #endif

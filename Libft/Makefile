@@ -22,7 +22,8 @@ SRCS =	$(SRCS_DIR)/ft_isalpha.c \
 		$(SRCS_DIR)/ft_tolower.c \
 		$(SRCS_DIR)/ft_toupper.c \
 		$(SRCS_DIR)/ft_atoi.c \
-		$(SRCS_DIR)/ft_memcpy.c
+		$(SRCS_DIR)/ft_memcpy.c \
+		$(SRCS_DIR)/ft_memmove.c \
 
 # Main source file and object file
 MAIN_SRC = $(MAIN_DIR)/main.c
