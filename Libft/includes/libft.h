@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:26:47 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:37 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/10/22 12:52:44 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isascii(int i);
 int		ft_isdigit(int i);
 int		ft_isprint(int i);
 int		ft_strchr(int i);
-int		ft_strlen(char *str);
+size_t	ft_strlen(const char *s);
 int		ft_tolower(int i);
 int		ft_toupper(int i);
 int		ft_atoi(const char *str);

@@ -6,18 +6,20 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:58:12 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/21 12:58:13 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/22 12:53:32 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
+	if (!s)
+		return (0);
 	i = 0;
-	while (str[i])
+	while (s[i])
 		i++;
 	return (i);
 }
