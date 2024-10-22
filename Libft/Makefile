@@ -24,6 +24,7 @@ SRCS =	$(SRCS_DIR)/ft_isalpha.c \
 		$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_memcpy.c \
 		$(SRCS_DIR)/ft_memmove.c \
+		$(SRCS_DIR)/ft_strdup.c \
 
 # Main source file and object file
 MAIN_SRC = $(MAIN_DIR)/main.c
@@ -53,11 +54,11 @@ test: main
 
 # clean rule removes .o from srcs
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(MAIN_OBJ)
 
 # fclean rule runs clean then removes libft.a
 fclean: clean 
-	rm -rf $(NAME)
+	rm -rf $(NAME) main
 
 # re rule runs fclean then runs make again
 re: fclean

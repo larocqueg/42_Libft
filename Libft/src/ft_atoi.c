@@ -6,32 +6,31 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:55:27 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/21 12:55:34 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/22 14:45:43 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	int	n;
-	int	sign;
+	unsigned int	num;
+	int				i;
+	int				np;
 
-	sign = 1;
-	if (!str)
-		return (0);
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	if ((*str == '-' || *str == '+'))
+	np = 1;
+	i = 0;
+	num = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f' ||
+			str[i] == '\r' || str[i] == '\n' || str[i] == '\v')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+		if (str[i++] == '-')
+			np = -1;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (*str == '-')
-			sign = -sign;
-		str++;
-		if (*(str + 1) == '-' || *(str + 1) == '+')
-			return (0);
+		num = num * 10 + (str[i] - '0');
+		i++;
 	}
-	n = 0;
-	while (ft_isdigit(*str))
-		n = n * 10 + (*str++ - '0');
-	return (n * sign);
+	return ((int)(np * num));
 }
