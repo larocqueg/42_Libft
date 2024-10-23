@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 16:01:36 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/23 16:01:37 by gde-la-r         ###   ########.fr       */
+/*   Created: 2024/10/23 17:09:29 by gde-la-r          #+#    #+#             */
+/*   Updated: 2024/10/23 17:09:31 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,10 @@ int main()
     // Test ft_strchr
     printf("ft_strchr('Hello, World!', 'W'): %s\n", ft_strchr("Hello, World!", 'W'));  
     // Expected: "World!"
+
+    // Test ft_strrchr
+    printf("ft_strrchr('Hello, World!', 'o'): %s\n", ft_strrchr("Hello, World!", 'o'));  
+    // Expected: "orld!"
 
     // Test ft_strdup
     char *dup_str = ft_strdup("Duplicate this");

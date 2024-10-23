@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:26:47 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/10/23 16:53:24 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:08:45 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(char *str);
-char *ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
