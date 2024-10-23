@@ -1,1 +1,1 @@
-make && make main && clear && make test
+make re && make main && clear && make test
