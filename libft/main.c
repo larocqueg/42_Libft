@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:09:29 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/23 23:44:41 by larocqueg        ###   ########.fr       */
+/*   Updated: 2024/10/24 00:09:18 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,6 +134,19 @@ int main()
     else
     {
         printf("ft_substr failed\n");
+    }
+
+	    // Test ft_strjoin
+    char *joined_str = ft_strjoin("Hello", ", World!");
+    if (joined_str)
+    {
+        printf("ft_strjoin('Hello', ', World!'): %s\n", joined_str);
+		// Expected: "Hello, World!"
+        free(joined_str);  // Free allocated memory
+    }
+    else
+    {
+        printf("ft_strjoin failed\n");
     }
 
     return 0;
