@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:09:29 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/23 17:09:31 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/23 23:44:41 by larocqueg        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,15 @@ int main()
     printf("ft_strlen('Hello, World!'): %zu\n", ft_strlen(str));  // Expected: 13
 
     // Test ft_strncmp
-    printf("ft_strncmp('abc', 'abc', 3): %d\n", ft_strncmp("abc", "abc", 3));  // Expected: 0
-    printf("ft_strncmp('abc', 'abd', 3): %d\n", ft_strncmp("abc", "abd", 3));  // Expected: -1
+    printf("ft_strncmp('abc', 'abc', 3): %d\n", ft_strncmp("abc", "abc", 3));
+	// Expected: 0
+    printf("ft_strncmp('abc', 'abd', 3): %d\n", ft_strncmp("abc", "abd", 3));
+	// Expected: -1
 
     // Test ft_memcpy
     char dest[20];
     ft_memcpy(dest, "Copy this", 10);
-    printf("ft_memcpy: %s\n", dest);  // Expected: "Copy this"
+    printf("ft_memcpy: %s\n", dest); // Expected: "Copy this"
 
     // Test ft_bzero
     ft_bzero(dest, 10);
@@ -120,6 +122,18 @@ int main()
     else
     {
         printf("Substring not found in the specified length\n");
+    }
+
+	// Test ft_substr
+    char *substr = ft_substr("Hello, World!", 7, 5);
+    if (substr)
+    {
+        printf("ft_substr('Hello, World!', 7, 5): %s\n", substr);  // Expected: "World"
+        free(substr);  // Free allocated memory
+    }
+    else
+    {
+        printf("ft_substr failed\n");
     }
 
     return 0;

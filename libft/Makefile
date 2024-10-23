@@ -35,7 +35,8 @@ SRCS =	$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_strncmp.c \
 		$(SRCS_DIR)/ft_tolower.c \
 		$(SRCS_DIR)/ft_toupper.c \
-		$(SRCS_DIR)/ft_strrchr.c
+		$(SRCS_DIR)/ft_strrchr.c \
+		$(SRCS_DIR)/ft_substr.c \
 
 # Main source file and object file
 MAIN_SRC = $(MAIN_DIR)/main.c
