@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
+/*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 12:56:14 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/21 12:56:16 by gde-la-r         ###   ########.fr       */
+/*   Created: 2024/10/23 13:53:43 by gde-la-r          #+#    #+#             */
+/*   Updated: 2024/10/23 13:56:33 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int i)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if ((i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z'))
+	size_t	i;
+
+	i = 0;
+	if (n == 0)
 		return (0);
-	else
-		return (1);
+	while ((s1[i] || s2[i]) && i < n)
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }
