@@ -6,14 +6,13 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:26:47 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/10/24 15:33:41 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/24 17:49:45 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
