@@ -8,11 +8,10 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # Directory paths
-SRCS_DIR = src
-MAIN_DIR = .
-INCLUDES_DIR = includes
+SRCS_DIR = .
+INCLUDES_DIR = .  # Points to the directory containing libft.h
 
-# Showing all *c files path for src
+# Source files
 SRCS =	$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_bzero.c \
 		$(SRCS_DIR)/ft_calloc.c \
@@ -24,7 +23,6 @@ SRCS =	$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_memchr.c \
 		$(SRCS_DIR)/ft_memcmp.c \
 		$(SRCS_DIR)/ft_memcpy.c \
-		$(SRCS_DIR)/ft_memmove.c \
 		$(SRCS_DIR)/ft_memset.c \
 		$(SRCS_DIR)/ft_strchr.c \
 		$(SRCS_DIR)/ft_strdup.c \
@@ -38,11 +36,7 @@ SRCS =	$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_strrchr.c \
 		$(SRCS_DIR)/ft_substr.c \
 		$(SRCS_DIR)/ft_strjoin.c \
-
-# Main source file and object file
-MAIN_SRC = $(MAIN_DIR)/main.c
-MAIN_OBJ = $(MAIN_SRC:.c=.o)
-
+		$(SRCS_DIR)/ft_memmove.c
 # Object files
 OBJS = $(SRCS:.c=.o)
 
@@ -50,28 +44,20 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 # Compile the lib
-$(NAME) : $(OBJS)
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 # Compile the object files
 %.o: %.c
 	$(CC) $(CFLAGS) -I $(INCLUDES_DIR) -c $< -o $@
 
-# Main compiling rule (can be moved into 'test' if only for testing)
-main: $(MAIN_OBJ) $(NAME)
-	$(CC) $(CFLAGS) -I $(INCLUDES_DIR) $(MAIN_OBJ) -o main $(NAME)
-
-# Test rule
-test: main
-	./main
-
 # clean rule removes .o from srcs
 clean:
-	rm -rf $(OBJS) $(MAIN_OBJ)
+	rm -rf $(OBJS)
 
 # fclean rule runs clean then removes libft.a
 fclean: clean 
-	rm -rf $(NAME) main
+	rm -rf $(NAME)
 
 # re rule runs fclean then runs make again
 re: fclean

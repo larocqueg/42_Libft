@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 14:50:38 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/23 15:03:13 by gde-la-r         ###   ########.fr       */
+/*   Created: 2024/10/24 12:16:13 by gde-la-r          #+#    #+#             */
+/*   Updated: 2024/10/24 12:30:47 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	void	*dest;
+	char	*src_chr;
+	char	*dest_chr;
+	size_t	i;
 
-	dest = (void *)malloc(nmemb * size);
-	if (!dest)
+	if (!dest && !src)
 		return (NULL);
-	ft_bzero(dest, nmemb);
+	src_chr = (char *)src;
+	dest_chr = (char *)dest;
+	if (dest_chr > src_chr)
+	{
+		while (len-- > 0)
+			dest_chr[len] = src_chr[len];
+	}
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			dest_chr[i] = src_chr[i];
+			i++;
+		}
+	}
 	return (dest);
 }
