@@ -36,7 +36,9 @@ SRCS =	$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_strrchr.c \
 		$(SRCS_DIR)/ft_substr.c \
 		$(SRCS_DIR)/ft_strjoin.c \
-		$(SRCS_DIR)/ft_memmove.c
+		$(SRCS_DIR)/ft_memmove.c \
+		$(SRCS_DIR)/ft_strtrim.c \
+
 # Object files
 OBJS = $(SRCS:.c=.o)
 
