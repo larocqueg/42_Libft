@@ -36,3 +36,12 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(sign * num));
 }
+/*
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac == 2)
+		printf("ft_atoi(%s) = %d", av[1], ft_atoi(av[1]));
+	printf("\n");
+	return (0);
+}*/

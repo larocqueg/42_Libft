@@ -23,3 +23,27 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+/*
+#include <stddef.h>
+#include <unistd.h>
+int	main(int ac, char **av)
+{
+	void	*s;
+	size_t	n;
+	int		i;
+
+	if (ac == 2)
+	{
+		n = ft_strlen(av[1]) / 2;
+		s = (void *)av[1];
+		ft_bzero(s, n);
+		i = 0;
+		while (av[1][i++] == 0)
+			write(1, ". ", 2);
+		i--;
+		while (av[1][i])
+			write(1, &av[1][i++], 1);
+	}
+	write(1, "\n", 1);
+	return (0);
+}*/
