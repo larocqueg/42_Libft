@@ -41,6 +41,8 @@ SRCS =	$(SRCS_DIR)/ft_atoi.c \
 		$(SRCS_DIR)/ft_putchar_fd.c \
 		$(SRCS_DIR)/ft_putstr_fd.c \
 		$(SRCS_DIR)/ft_putnbr_fd.c \
+		$(SRCS_DIR)/ft_putendl_fd.c \
+		$(SRCS_DIR)/ft_striteri.c \
 
 # Object files
 OBJS = $(SRCS:.c=.o)
