@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:22:25 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/25 18:34:02 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/25 19:38:19 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
-		return ;
-	if (fd < 0)
 		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
