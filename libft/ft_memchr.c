@@ -45,4 +45,4 @@ int	main(int ac, char **av)
 	else
 		printf("Missing command-line argument!\n");
 	return (0);
-}
+}*/
