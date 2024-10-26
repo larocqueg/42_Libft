@@ -6,7 +6,7 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:56:06 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/26 14:06:43 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:20:24 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int	ft_isalnum(int i)
 		return (0);
 }
 /*
+#include "ft_strlen.c"
+#include "ft_isalpha.c"
+#include "ft_isdigit.c"
 #include <stdio.h>
 int	main(int ac, char **av)
 {
