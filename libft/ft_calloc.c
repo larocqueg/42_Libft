@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:50:38 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/24 15:06:30 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/26 13:56:52 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(dest, nmemb * size);
 	return (dest);
 }
+/*
+int	main(int ac, char **av)
+{
+
+}*/

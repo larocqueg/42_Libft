@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 11:56:26 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/23 11:56:27 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:16:21 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 /*
-#include <stddef.h>
-#include <unistd.h>
+#include "ft_strlen.c"
+#include <stdio.h>
 int	main(int ac, char **av)
 {
 	void	*s;
@@ -36,14 +36,21 @@ int	main(int ac, char **av)
 	{
 		n = ft_strlen(av[1]) / 2;
 		s = (void *)av[1];
+		printf("Original string is: %s\n", av[1]);
+		printf("After ft_bzero the chars = '.' are the erased ones!\n");
 		ft_bzero(s, n);
 		i = 0;
 		while (av[1][i++] == 0)
-			write(1, ". ", 2);
+			printf(".");
 		i--;
 		while (av[1][i])
-			write(1, &av[1][i++], 1);
+			printf("%c", av[1][i++]);
+		printf("\n");
+		return (0);
 	}
-	write(1, "\n", 1);
-	return (0);
+	else if (ac > 2)
+		printf("Too many arguments!\n");
+	else
+		printf("Missin command-line argument!\n");
+	return (1);
 }*/
