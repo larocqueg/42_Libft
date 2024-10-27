@@ -25,3 +25,19 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+/*
+#include "ft_atoi.c"
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac == 4)
+	{
+		printf("%i\n", ft_memcmp(av[1], av[2], (size_t)ft_atoi(av[3])));
+		return (0);
+	}
+	else if (ac > 4)
+		printf("Too many arguments!\n");
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
+}*/
