@@ -38,3 +38,19 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	return (dest);
 }
+/*
+#include "ft_atoi.c"
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac == 4)
+	{
+		printf("%s\n", (char *)ft_memmove(av[2], av[1], ft_atoi(av[3])));
+		return (0);
+	}
+	else if (ac > 4)
+		printf("Too many arguments!\n");
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
+}*/
