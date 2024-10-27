@@ -34,17 +34,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
+#include "ft_atoi.c"
 #include <stdio.h>
-#include <stddef.h>
-int main()
+int	main(int ac, char **av)
 {
-    char source[] = "Hello, World!";
-    char destination[20];
-
-    ft_memcpy(destination, source, 12);  // Copies 13 bytes (including '\0')
-
-    printf("%s\n", destination);  // Output: Hello, World!
-
-    return 0;
-}
-*/
+	if (ac == 4)
+	{
+		printf("%s\n", (char *)ft_memcpy(av[2], av[1], ft_atoi(av[3])));
+		return (0);
+	}
+	else if (ac > 4)
+		printf("Too many arguments!\n");	
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
+}*/
