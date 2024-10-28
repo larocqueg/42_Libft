@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:40:44 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/25 17:43:55 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/28 10:51:57 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	main(int ac, char **av)
 		size_t	len = ft_strlen(av[1]);
 		while (i <= len)
 			ft_putchar_fd(av[1][i++], 1);
-		ft_putchar_fd('\n', 1);
 		return (0);
 	}
 	else if (ac > 2)
