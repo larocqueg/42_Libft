@@ -6,7 +6,7 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:39:03 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/25 17:28:26 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:48:04 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,18 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
+/*
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac == 3)
+	{
+		printf("%s\n", ft_strchr(av[1], av[2][0]));
+		return (0);
+	}
+	else if (ac > 3)
+		printf("Too many arguments!\n");
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
+}*/
