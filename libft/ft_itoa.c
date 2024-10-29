@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 		neg = 1;
 	}
 	len = ft_numlen(n);
-	str = (char *)malloc(sizeof(char) * len + neg + 1);
+	str = (char *)malloc(sizeof(char) * (len + neg + 1));
 	if (!str)
 		return (NULL);
 	if (neg == 1)
@@ -53,5 +53,6 @@ char	*ft_itoa(int n)
 		str[len--] = n % 10 + '0';
 		n /= 10;
 	}
+	str[len] = n + '0';
 	return (str);
 }
