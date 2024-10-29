@@ -6,7 +6,7 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:39:03 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/28 11:48:04 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/29 13:34:05 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
@@ -27,6 +27,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
+
 /*
 #include <stdio.h>
 int	main(int ac, char **av)

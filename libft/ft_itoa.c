@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:37:52 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/29 12:32:10 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/29 13:25:03 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ static int	ft_numlen(int n)
 
 static char	*ft_completestr(int n, size_t len, size_t neg)
 {
+	char	*str;
+
 	str = (char *)malloc(sizeof(char) * (len + neg + 1));
 	if (!str)
 		return (NULL);
@@ -50,7 +52,6 @@ char	*ft_itoa(int n)
 {
 	size_t	len;
 	size_t	neg;
-	char	*str;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
