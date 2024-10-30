@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:26:47 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/10/28 17:22:22 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:56:47 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(const char *s1, const char *set);
+char	**ft_split(const char *s, char c);
 
 #endif
