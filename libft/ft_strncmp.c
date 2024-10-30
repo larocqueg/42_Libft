@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:53:43 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/24 12:15:08 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:45:11 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,19 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*
+#include "ft_atoi.c"
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac == 4)
+	{
+		printf("%d\n", ft_strncmp(av[1], av[2], (size_t)ft_atoi(av[3])));
+		return (0);
+	}
+	else if (ac > 4)
+		printf("Too many arguments!\n");
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
+}*/
