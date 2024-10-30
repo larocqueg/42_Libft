@@ -6,7 +6,7 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:41:53 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/28 17:57:13 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:19:56 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,22 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 /*
 #include <stdio.h>
-#include "ft_strlcpy.c"
 #include "ft_strlen.c"
-int main()
+#include "ft_strlcpy.c"
+int main(int ac, char **av)
 {
-	char dest1[11] = "Hello";
-	const char *src1 = "World";
-	printf("%zu\n", ft_strlcat(dest1, src1, sizeof(dest1)));
-	printf("Result: %s\n", dest1);
-	return 0;
+	if (ac == 3)
+	{
+		char *dest = av[1];
+		const char *src = av[2];
+		printf("%zu\n",
+		ft_strlcat(dest, src, ft_strlen(dest) + ft_strlen(src) + 1));
+		printf("Result: %s\n", dest);
+		return (0);
+	}
+	else if (ac > 3)
+		printf("Too many arguments!\n");
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
 }*/
