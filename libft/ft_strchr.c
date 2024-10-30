@@ -6,7 +6,7 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:39:03 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/29 13:34:05 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:30:47 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)&s[i]);
 	return (NULL);
 }
