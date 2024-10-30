@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:06:22 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/30 11:49:38 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 12:30:41 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,18 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!*little)
+	if (!little[0])
 		return ((char *)big);
-	if (len == 0)
-		return (NULL);
 	i = 0;
-	while (big[i] && i < len)
+	while (big[i])
 	{
-		if (big[i] == little[0])
+		j = 0;
+		while (big[i + j] && big[i + j] == little[j] && (i + j) < len)
 		{
-			j = 0;
-			while (little[j] && big[i + j] && (i + j) < len)
-			{
-				if (big[i + j] != little[j])
-					break ;
-				j++;
-			}
-			if (!little[j])
-				return ((char *)(big + i));
+			j++;
 		}
+		if (!little[j])
+			return ((char *)&big[i]);
 		i++;
 	}
 	return (NULL);
