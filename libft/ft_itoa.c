@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:37:52 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/29 13:25:03 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:15:13 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,23 @@ char	*ft_itoa(int n)
 	len = ft_numlen(n);
 	return (ft_completestr(n, len, neg));
 }
+/*
+#include "ft_strdup.c"
+#include "ft_atoi.c"
+#include "ft_strlen.c"
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac == 2)
+	{
+		char *dest = ft_itoa(ft_atoi(av[1]));
+		printf("The int (%d)\nafter itoa is a str (%s)\n", 
+		ft_atoi(av[1]), dest);
+		free(dest);
+	}
+	else if (ac > 2)
+		printf("Too many arguments!\n");
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
+}*/

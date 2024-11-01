@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:57:44 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/30 13:41:08 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:22:18 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,30 @@ char	**ft_split(char const *s, char c)
 			s += len;
 		}
 	}
-	dest[i] = NULL;
+	dest[i] = '\0';
 	return (dest);
 }
+/*
+#include "ft_strchr.c"
+#include "ft_substr.c"
+#include "ft_strdup.c"
+#include "ft_strlen.c"
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	if (ac == 3)
+	{
+		int	i = 0;
+		int	j = 0;
+		char **dest = ft_split(av[1], av[2][0]);
+		while (dest[i])
+			printf("%s\n", dest[i++]);
+		free(dest);
+		return (0);
+	}
+	else if (ac > 3)
+		printf("Too many arguments!\n");
+	else
+		printf("Missing command-line argument!\n");
+	return (1);
+}*/
