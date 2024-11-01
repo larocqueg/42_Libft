@@ -6,18 +6,41 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:57:44 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/10/31 14:22:18 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:12:31 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_words(const char *str, char sep)
+static void	ft_free(char **dest, int count);
+static int	ft_count_words(const char *str, char sep);
+static char	**ft_complete_words(char **dest, const char *s, char c, int *i);
+static void	ft_free(char **dest, int count);
+
+char	**ft_split(char const *s, char c)
+{
+	char	**dest;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	dest = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	dest = ft_complete_words(dest, s, c, &i);
+	if (!dest)
+		return (NULL);
+	dest[i] = NULL;
+	return (dest);
+}
+
+static int	ft_count_words(const char *str, char sep)
 {
 	int	i;
 	int	words;
 
-	if (!str[0])
+	if (!str || !str[0])
 		return (0);
 	i = 0;
 	words = 0;
@@ -33,16 +56,10 @@ static	int	ft_words(const char *str, char sep)
 	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_complete_words(char **dest, const char *s, char c, int *i)
 {
-	char	**dest;
 	size_t	len;
-	int		i;
 
-	dest = (char **)malloc((ft_words(s, c) + 1) * sizeof(char *));
-	if (!s || !dest)
-		return (0);
-	i = 0;
 	while (*s)
 	{
 		while (*s == c && *s)
@@ -53,12 +70,24 @@ char	**ft_split(char const *s, char c)
 				len = ft_strlen(s);
 			else
 				len = ft_strchr(s, c) - s;
-			dest[i++] = ft_substr(s, 0, len);
+			dest[*i] = ft_substr(s, 0, len);
+			if (!dest[*i])
+			{
+				ft_free(dest, *i);
+				return (NULL);
+			}
 			s += len;
+			(*i)++;
 		}
 	}
-	dest[i] = '\0';
 	return (dest);
+}
+
+static void	ft_free(char **dest, int count)
+{
+	while (count > 0)
+		free(dest[--count]);
+	free(dest);
 }
 /*
 #include "ft_strchr.c"
