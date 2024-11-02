@@ -23,6 +23,10 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 # Compile the lib
+# ar creates/modify libft.a
+# r tells ar to  insert OBJS into the libft.a, if it already exists it will replace same name files
+# c tells ar to create the archive if it does not exist
+# s creats a index for each function in libft.a
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
