@@ -27,7 +27,7 @@ int	ft_lstsize(t_list *lst)
 /*
 #include "ft_lstnew.c"
 #include <stdio.h>
-int main()
+int main(void)
 {
     t_list *head = ft_lstnew("1");
     head->next = ft_lstnew("2");
