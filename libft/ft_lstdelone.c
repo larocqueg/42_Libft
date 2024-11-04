@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:42:14 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/11/04 12:13:46 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/11/04 12:52:31 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	del((void *)lst->content);
 	free(lst);
 }
-
+/*
 void	del(void *lst)
 {
 	free(lst);
 }
-/*
 #include "ft_lstnew.c"
 #include "ft_strdup.c"
 #include "ft_strlen.c"
