@@ -19,8 +19,29 @@ int	ft_lstsize(t_list *lst)
 	i = 0;
 	while (lst)
 	{
-		lst = lst->next;
 		i++;
+		lst = lst->next;
 	}
 	return (i);
 }
+/*
+#include "ft_lstnew.c"
+#include <stdio.h>
+int main()
+{
+    t_list *head = ft_lstnew("1");
+    head->next = ft_lstnew("2");
+    head->next->next = ft_lstnew("3");
+    head->next->next->next = ft_lstnew("4");
+    head->next->next->next->next = ft_lstnew("5");
+
+    int size = ft_lstsize(head);
+    printf("The size of the list is: %d\n", size);
+    while (head)
+	{
+        t_list *temp = head;
+        head = head->next;
+        free(temp);
+    }
+    return (0);
+}*/
