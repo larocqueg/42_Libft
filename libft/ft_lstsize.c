@@ -29,18 +29,18 @@ int	ft_lstsize(t_list *lst)
 #include <stdio.h>
 int main(void)
 {
-    t_list *head = ft_lstnew("1");
-    head->next = ft_lstnew("2");
-    head->next->next = ft_lstnew("3");
-    head->next->next->next = ft_lstnew("4");
-    head->next->next->next->next = ft_lstnew("5");
+    t_list *node = ft_lstnew("1");
+    node->next = ft_lstnew("2");
+    node->next->next = ft_lstnew("3");
+    node->next->next->next = ft_lstnew("4");
+    node->next->next->next->next = ft_lstnew("5");
 
-    int size = ft_lstsize(head);
+    int size = ft_lstsize(node);
     printf("The size of the list is: %d\n", size);
-    while (head)
+    while (node)
 	{
-        t_list *temp = head;
-        head = head->next;
+        t_list *temp = node;
+        node = node->next;
         free(temp);
     }
     return (0);
