@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:57:44 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/11/01 16:12:31 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:41:05 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,10 +102,18 @@ int	main(int ac, char **av)
 		int	i = 0;
 		int	j = 0;
 		char **dest = ft_split(av[1], av[2][0]);
-		while (dest[i])
-			printf("%s\n", dest[i++]);
-		free(dest);
-		return (0);
+		if (!dest)
+		{
+			printf("Memory alocation fail!\n");
+			free(dest);
+		}
+		else
+		{
+			while (dest[i])
+				printf("%s\n", dest[i++]);
+			free(dest);
+			return (0);
+		}
 	}
 	else if (ac > 3)
 		printf("Too many arguments!\n");

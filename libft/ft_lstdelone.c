@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:42:14 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/11/04 12:52:31 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:42:42 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,20 @@ int	main(void)
 {
 	t_list	*node;
 
-	node = ft_lstnew(ft_strdup("42"));
+	node = ft_lstnew("42");
 	ft_lstdelone(node, del);
 	node = NULL;
 	if (node == NULL)
 	{
 		printf("Node deleted successfully!\n");
+		free(node);
+		return (0);
 	}
 	else
 	{
 		printf("Node deletion failed!\n");
+		free(node);
+		return (1);
+
 	}
-	return (0);
 }*/
