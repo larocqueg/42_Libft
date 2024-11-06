@@ -52,8 +52,8 @@ fclean: clean
 
 # re rule runs fclean then runs make again
 re: fclean
-	make
+	make && make bonus
 
 # Avoid name clashes
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
