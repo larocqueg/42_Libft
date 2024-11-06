@@ -36,17 +36,4 @@ int	main(void)
 	node = ft_lstnew("42");
 	ft_lstdelone(node, del);
 	node = NULL;
-	if (node == NULL)
-	{
-		printf("Node deleted successfully!\n");
-		free(node);
-		return (0);
-	}
-	else
-	{
-		printf("Node deletion failed!\n");
-		free(node);
-		return (1);
-
-	}
 }*/
