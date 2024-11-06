@@ -31,9 +31,8 @@ void	del(void *lst)
 
 int	main(void)
 {
-	t_list	*node;
-
-	node = ft_lstnew("42");
+	char *content = ft_strdup("Hello");
+	t_list *node = ft_lstnew(content);
 	ft_lstdelone(node, del);
 	node = NULL;
 }*/
