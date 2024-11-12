@@ -6,7 +6,7 @@
 /*   By: gde-la-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:57:44 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/11/05 10:41:05 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:32:55 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static void	ft_free(char **dest, int count);
 static int	ft_count_words(const char *str, char sep);
 static char	**ft_complete_words(char **dest, const char *s, char c, int *i);
-static void	ft_free(char **dest, int count);
 
 char	**ft_split(char const *s, char c)
 {
