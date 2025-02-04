@@ -6,7 +6,7 @@
 /*   By: larocqueg <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:26:47 by larocqueg         #+#    #+#             */
-/*   Updated: 2024/11/04 14:15:24 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2025/02/04 16:21:18 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+# include "./ft_printf/ft_printf.h"
+# include "./get_next_line/get_next_line.h"
 
 typedef struct s_list
 {
