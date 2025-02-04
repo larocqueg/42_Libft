@@ -7,19 +7,65 @@ CC = cc
 # Compiling flags
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES_DIR = .  # Points to the directory containing libft.h
+SRC_DIR = .
+PRINTF_DIR = ./ft_printf
+GNL_DIR = ./get_next_line
 
 # Source files
-SRCS =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
-ft_isprint.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c \
-ft_strlcpy.c ft_strlen.c ft_strnstr.c ft_strncmp.c ft_tolower.c ft_toupper.c ft_strrchr.c \
-ft_substr.c ft_strjoin.c ft_memmove.c ft_strtrim.c ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c \
-ft_putendl_fd.c ft_striteri.c ft_itoa.c ft_split.c ft_strmapi.c ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+SRCS =	$(SRC_DIR)/ft_atoi.c \
+		$(SRC_DIR)/ft_bzero.c \
+		$(SRC_DIR)/ft_calloc.c \
+		$(SRC_DIR)/ft_isalnum.c \
+		$(SRC_DIR)/ft_isalpha.c \
+		$(SRC_DIR)/ft_isascii.c \
+		$(SRC_DIR)/ft_isdigit.c \
+		$(SRC_DIR)/ft_isprint.c \
+		$(SRC_DIR)/ft_memchr.c \
+		$(SRC_DIR)/ft_memcmp.c \
+		$(SRC_DIR)/ft_memcpy.c \
+		$(SRC_DIR)/ft_memset.c \
+		$(SRC_DIR)/ft_strchr.c \
+		$(SRC_DIR)/ft_strdup.c \
+		$(SRC_DIR)/ft_strlcat.c \
+		$(SRC_DIR)/ft_strlcpy.c \
+		$(SRC_DIR)/ft_strlen.c \
+		$(SRC_DIR)/ft_strnstr.c \
+		$(SRC_DIR)/ft_strncmp.c \
+		$(SRC_DIR)/ft_tolower.c \
+		$(SRC_DIR)/ft_toupper.c \
+		$(SRC_DIR)/ft_strrchr.c \
+		$(SRC_DIR)/ft_substr.c \
+		$(SRC_DIR)/ft_strjoin.c \
+		$(SRC_DIR)/ft_memmove.c \
+		$(SRC_DIR)/ft_strtrim.c \
+		$(SRC_DIR)/ft_putchar_fd.c \
+		$(SRC_DIR)/ft_putstr_fd.c \
+		$(SRC_DIR)/ft_putnbr_fd.c \
+		$(SRC_DIR)/ft_putendl_fd.c \
+		$(SRC_DIR)/ft_striteri.c \
+		$(SRC_DIR)/ft_itoa.c \
+		$(SRC_DIR)/ft_split.c \
+		$(SRC_DIR)/ft_strmapi.c \
+		$(SRC_DIR)/ft_lstnew.c \
+		$(SRC_DIR)/ft_lstadd_front.c \
+		$(SRC_DIR)/ft_lstsize.c \
+		$(SRC_DIR)/ft_lstlast.c \
+		$(SRC_DIR)/ft_lstadd_back.c \
+		$(SRC_DIR)/ft_lstdelone.c \
+		$(SRC_DIR)/ft_lstclear.c \
+		$(SRC_DIR)/ft_lstiter.c \
+		$(SRC_DIR)/ft_lstmap.c \
+		$(PRINTF_DIR)/ft_printf.c \
+		$(PRINTF_DIR)/ft_putchar.c \
+		$(PRINTF_DIR)/ft_putnbr_base.c \
+		$(PRINTF_DIR)/ft_putpointer.c \
+		$(PRINTF_DIR)/ft_putstr.c \
+		$(PRINTF_DIR)/ft_strchar.c \
+		$(GNL_DIR)/get_next_line.c \
+		$(GNL_DIR)/get_next_line_utils.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 # all rule
 all: $(NAME)
@@ -30,7 +76,7 @@ $(NAME): $(OBJS)
 
 # Compile the object files
 %.o: %.c
-	$(CC) $(CFLAGS) -I $(INCLUDES_DIR) -c $< -o $@
+	$(CC) $(CFLAGS) -I $(SRC_DIR) -I $(PRINTF_DIR) -I $(GNL_DIR) $ -c $< -o $@
 
 # clean rule removes .o from srcs
 clean:

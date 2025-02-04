@@ -6,11 +6,10 @@
 /*   By: gde-la-r <gde-la-r@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:39:03 by gde-la-r          #+#    #+#             */
-/*   Updated: 2024/11/11 17:45:41 by gde-la-r         ###   ########.fr       */
+/*   Updated: 2025/02/04 16:16:04 by gde-la-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
 #include <unistd.h>
 
 char	*ft_strchar(const char *s, int c)
@@ -28,19 +27,3 @@ char	*ft_strchar(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-int	main(int ac, char **av)
-{
-	if (ac == 3)
-	{
-		printf("%s\n", ft_strchr(av[1], av[2][0]));
-		return (0);
-	}
-	else if (ac > 3)
-		printf("Too many arguments!\n");
-	else
-		printf("Missing command-line argument!\n");
-	return (1);
-}*/
