@@ -14,7 +14,7 @@ Libft is a custom implementation of the standard C library functions. It provide
 Clone the repository and compile the library:
 
 ```sh
-$ git clone https://github.com/yourusername/libft.git
+$ git clone https://github.com/larocqueg/42_Libft
 $ cd libft
 $ make
 ```
@@ -32,7 +32,7 @@ To use `libft` in your project, include the header file and link the library:
 Compile with:
 
 ```sh
-$ gcc your_program.c -L. -lft -o your_program
+$ cc your_program.c -L. -lft -o your_program
 ```
 
 ## Functions
