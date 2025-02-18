@@ -7,7 +7,6 @@ Libft is a custom implementation of the standard C library functions. It provide
 - [Usage](#usage)
 - [Functions](#functions)
 - [Testing](#testing)
-- [License](#license)
 
 ## Installation
 
