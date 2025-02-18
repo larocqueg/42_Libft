@@ -35,7 +35,7 @@ To use `libft` in your project, include the header file and link the library:
 Compile with:
 
 ```sh
-cc your_program.c -L. -lft -o your_program
+cc your_program.c -L. -lft 
 ```
 
 ## Functions
