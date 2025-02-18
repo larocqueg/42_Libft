@@ -56,6 +56,8 @@ You can test the library using [Francinette](https://github.com/WaRtr0/francinet
 
 ```sh
 git clone https://github.com/WaRtr0/francinette-image.git
-cd francinette-image
-./francinette -s libft
+```
+Inside of libft repository
+```sh
+francinette
 ```
