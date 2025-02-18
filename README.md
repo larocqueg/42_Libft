@@ -14,7 +14,7 @@ Libft is a custom implementation of the standard C library functions. It provide
 Clone the repository and compile the library:
 
 ```sh
-git clone https://github.com/larocqueg/42_Libft
+git clone https://github.com/larocqueg/42_Libft libft
 cd libft
 make
 ```
