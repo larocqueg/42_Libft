@@ -1,6 +1,6 @@
 # Libft
 
-Libft is a custom implementation of the standard C library functions. It provides useful utilities for handling strings, memory, and lists, essential for coding projects and learning low-level programming concepts.
+Libft is a custom implementation of the standard C library functions. It provides useful utilities for handling strings, memory and lists, essential for coding projects and learning low-level programming concepts.
 
 ## Table of Contents
 - [Installation](#installation)
