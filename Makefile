@@ -8,8 +8,6 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC_DIR = .
-PRINTF_DIR = ./ft_printf
-GNL_DIR = ./get_next_line
 
 # Source files
 SRCS =	$(SRC_DIR)/ft_atoi.c \
@@ -55,14 +53,6 @@ SRCS =	$(SRC_DIR)/ft_atoi.c \
 		$(SRC_DIR)/ft_lstclear.c \
 		$(SRC_DIR)/ft_lstiter.c \
 		$(SRC_DIR)/ft_lstmap.c \
-		$(PRINTF_DIR)/ft_printf.c \
-		$(PRINTF_DIR)/ft_putchar.c \
-		$(PRINTF_DIR)/ft_putnbr_base.c \
-		$(PRINTF_DIR)/ft_putpointer.c \
-		$(PRINTF_DIR)/ft_putstr.c \
-		$(PRINTF_DIR)/ft_strchar.c \
-		$(GNL_DIR)/get_next_line.c \
-		$(GNL_DIR)/get_next_line_utils.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
@@ -76,7 +66,7 @@ $(NAME): $(OBJS)
 
 # Compile the object files
 %.o: %.c
-	$(CC) $(CFLAGS) -I $(SRC_DIR) -I $(PRINTF_DIR) -I $(GNL_DIR) $ -c $< -o $@
+	$(CC) $(CFLAGS) -I $(SRC_DIR) -c $< -o $@
 
 # clean rule removes .o from srcs
 clean:
