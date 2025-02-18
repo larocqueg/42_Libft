@@ -1,6 +1,6 @@
 # Libft
 
-Libft is a custom implementation of the standard C library functions. It provides useful utilities for handling strings, memory and lists, essential for coding projects and learning low-level programming concepts.
+Libft is a custom implementation of the standard C library functions. It provides useful utilities for handling strings, memory, and lists, essential for coding projects and learning low-level programming concepts.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -32,7 +32,7 @@ To use `libft` in your project, include the header file and link the library:
 Compile with:
 
 ```sh
-$ cc your_program.c -L. -lft -o your_program
+$ gcc your_program.c -L. -lft -o your_program
 ```
 
 ## Functions
@@ -48,10 +48,10 @@ For a full list, check `libft.h`.
 
 ## Testing
 
-You can test the library using a testing framework like [libft-unit-test](https://github.com/alelievr/libft-unit-test):
+You can test the library using [Francinette](https://github.com/WaRtr0/francinette-image):
 
 ```sh
-$ git clone https://github.com/alelievr/libft-unit-test.git
-$ cd libft-unit-test
-$ make f
+$ git clone https://github.com/WaRtr0/francinette-image.git
+$ cd francinette-image
+$ ./francinette -s libft
 ```
