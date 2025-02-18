@@ -1,77 +1,57 @@
-Libft - 42 Project
-Libft is a personal library created as part of the 42 School curriculum. This repository contains a collection of useful functions that are used across several 42 projects. It implements functions that are commonly used in C programming but are not part of the C standard library.
+# Libft
 
-This version includes both the main set of functions and the bonus functions required for the project.
+Libft is a custom implementation of the standard C library functions. It provides useful utilities for handling strings, memory, and lists, essential for coding projects and learning low-level programming concepts.
 
-Table of Contents
-Description
-Functions
-Bonus
-Compilation
-Usage
-Tests
-License
-Description
-Libft is a custom library designed to provide implementations for standard C functions. It is an essential project at the beginning of the 42 curriculum and helps reinforce important concepts such as pointers, memory management, and string manipulation.
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Functions](#functions)
+- [Testing](#testing)
+- [License](#license)
 
-Functions Included
-Memory management: malloc, free, etc.
-String manipulation: strlen, strcpy, strcmp, etc.
-Character classification: isdigit, isalpha, isascii, etc.
-Conversion: atoi, itoa, etc.
-Linked list functions
-Other utility functions
-Bonus Functions
-In addition to the basic set of functions, this repository also includes the bonus functions. These functions extend the libft library's capabilities and demonstrate additional challenges. Some of the bonus functions might include:
+## Installation
 
-ft_lstmap: Applies a function to each element of a linked list.
-ft_lstiter: Iterates over a linked list and applies a function to each element.
-Functions
-Below are some of the key functions implemented in this repository:
+Clone the repository and compile the library:
 
-ft_strlen: Returns the length of a string.
-ft_strdup: Duplicates a string.
-ft_memset: Fills a block of memory with a specific value.
-ft_atoi: Converts a string to an integer.
-ft_isdigit: Checks if a character is a digit.
-ft_lstadd_back: Adds an element to the end of a linked list.
-(Add any additional functions you've implemented or want to highlight)
-Bonus Functions
-ft_lstmap: Maps a function onto each element of a linked list.
-ft_lstiter: Iterates over each element of a linked list and applies a function to it.
-Compilation
-To compile the libft library, simply run the following command in the root directory of this repository:
+```sh
+$ git clone https://github.com/yourusername/libft.git
+$ cd libft
+$ make
+```
 
-bash
-Copiar
-make
-This will compile the library and create the libft.a archive.
+This will generate the `libft.a` static library file.
 
-To clean up object files, you can run:
+## Usage
 
-bash
-Copiar
-make clean
-To remove both object files and the library, use:
+To use `libft` in your project, include the header file and link the library:
 
-bash
-Copiar
-make fclean
-And to recompile everything, including the clean-up, use:
+```c
+#include "libft.h"
+```
 
-bash
-Copiar
-make re
-Usage
-Once the library is compiled, you can link it to your C programs by including the libft.h header and adding the libft.a to your linking command. For example:
+Compile with:
 
-bash
-Copiar
-gcc -o my_program my_program.c -L. -lft
-Tests
-To ensure the library functions correctly, it’s important to test each function. If you want to add your own tests, feel free to create a test directory and include any test cases you may have written.
+```sh
+$ gcc your_program.c -L. -lft -o your_program
+```
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Functions
 
-Let me know if you'd like to make any adjustments to the structure or add specific details!
+Libft includes custom implementations of various standard C functions, such as:
+
+- **Memory Functions**: `ft_memset`, `ft_memcpy`, `ft_memmove`, `ft_memcmp`, `ft_bzero`
+- **String Functions**: `ft_strlen`, `ft_strcpy`, `ft_strdup`, `ft_strjoin`, `ft_strncmp`
+- **Character Checks**: `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_tolower`, `ft_toupper`
+- **Linked List Utilities**: `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`, `ft_lstdelone`
+
+For a full list, check `libft.h`.
+
+## Testing
+
+You can test the library using a testing framework like [libft-unit-test](https://github.com/alelievr/libft-unit-test):
+
+```sh
+$ git clone https://github.com/alelievr/libft-unit-test.git
+$ cd libft-unit-test
+$ make f
+```
