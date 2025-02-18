@@ -14,9 +14,9 @@ Libft is a custom implementation of the standard C library functions. It provide
 Clone the repository and compile the library:
 
 ```sh
-$ git clone https://github.com/larocqueg/42_Libft
-$ cd libft
-$ make
+git clone https://github.com/larocqueg/42_Libft
+cd libft
+make
 ```
 
 This will generate the `libft.a` static library file.
@@ -32,7 +32,7 @@ To use `libft` in your project, include the header file and link the library:
 Compile with:
 
 ```sh
-$ cc your_program.c -L. -lft -o your_program
+cc your_program.c -L. -lft -o your_program
 ```
 
 ## Functions
@@ -51,7 +51,7 @@ For a full list, check `libft.h`.
 You can test the library using [Francinette](https://github.com/WaRtr0/francinette-image):
 
 ```sh
-$ git clone https://github.com/WaRtr0/francinette-image.git
-$ cd francinette-image
-$ ./francinette -s libft
+git clone https://github.com/WaRtr0/francinette-image.git
+cd francinette-image
+./francinette -s libft
 ```
