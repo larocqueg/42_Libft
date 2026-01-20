@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gde-la-r <gde-la-r@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/01/20 22:58:42 by gde-la-r          #+#    #+#              #
+#    Updated: 2026/01/20 23:10:11 by gde-la-r         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 # The name of the lib
 NAME = libft.a
 
@@ -7,7 +19,8 @@ CC = cc
 # Compiling flags
 CFLAGS = -Wall -Wextra -Werror
 
-SRC_DIR = .
+SRC_DIR = ./srcs
+HEAD = /srcs/libft.h
 
 # Source files
 SRCS =	$(SRC_DIR)/ft_atoi.c \
@@ -55,7 +68,7 @@ SRCS =	$(SRC_DIR)/ft_atoi.c \
 		$(SRC_DIR)/ft_lstmap.c \
 
 # Object files
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS_DIR:.c=.o)
 
 # all rule
 all: $(NAME)
@@ -66,7 +79,7 @@ $(NAME): $(OBJS)
 
 # Compile the object files
 %.o: %.c
-	$(CC) $(CFLAGS) -I $(SRC_DIR) -c $< -o $@
+	$(CC) $(CFLAGS) -I $(HEAD) -c $< -o $@
 
 # clean rule removes .o from srcs
 clean:
