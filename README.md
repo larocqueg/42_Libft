@@ -17,10 +17,6 @@ git clone https://github.com/larocqueg/42_Libft libft
 cd libft
 make
 ```
-For the bonus part (everything with linked list)
-```sh
-make bonus
-```
 
 This will generate the `libft.a` static library file.
 
